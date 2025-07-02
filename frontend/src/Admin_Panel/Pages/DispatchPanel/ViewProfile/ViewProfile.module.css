@@ -1,0 +1,8 @@
+.profileContainer {
+  max-width: 600px;
+}
+
+.card {
+  border-radius: 12px;
+  background-color: #f9f9f9;
+}

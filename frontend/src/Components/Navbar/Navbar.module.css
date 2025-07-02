@@ -1,0 +1,17 @@
+.navbar {
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.navbar__logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #f1c40f !important;
+}
+
+.navbar__item a {
+  transition: color 0.3s ease;
+}
+
+.navbar__item a:hover {
+  color: #f39c12 !important;
+}

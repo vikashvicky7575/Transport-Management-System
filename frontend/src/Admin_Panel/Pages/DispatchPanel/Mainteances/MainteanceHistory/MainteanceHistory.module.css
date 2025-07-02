@@ -1,0 +1,33 @@
+/* MainteanceHistory.module.css */
+
+.status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.pending {
+  background-color: #f59e0b; /* amber */
+}
+
+.inProgress {
+  background-color: #3b82f6; /* blue */
+}
+
+.delayed {
+  background-color: #ef4444; /* red */
+}
+
+.fixed {
+  background-color: #10b981; /* green */
+}
+
+.waiting {
+  background-color: #6366f1; /* indigo */
+}
+
+.toWorkshop {
+  background-color: #e11d48; /* pink */
+}

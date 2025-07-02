@@ -1,0 +1,98 @@
+/* .containerHead {
+    background: linear-gradient(to right, #14aaf5, #0882c0);
+    overflow-x: hidden;
+}
+
+.loginImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    max-height: 600px;
+} */
+
+.containerHead {
+  background-color: #f2f4f7;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Left side image and text section */
+.leftPanel {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.leftPanel img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.leftPanel h4 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.leftPanel p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Right side login form */
+.rightPanel {
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 0;
+}
+
+.cardTitle {
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.formControl {
+  margin-bottom: 1.2rem;
+}
+
+.inputGroupIcon {
+  cursor: pointer;
+}
+
+.btnPrimary {
+  background-color: #6a11cb;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btnPrimary:hover {
+  background-color: #4d0fa3;
+}
+
+.invalidFeedback {
+  font-size: 0.875rem;
+  color: #dc3545;
+  margin-top: 0.25rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .leftPanel {
+    display: none;
+  }
+
+  .rightPanel {
+    padding: 2rem 1.5rem;
+  }
+}

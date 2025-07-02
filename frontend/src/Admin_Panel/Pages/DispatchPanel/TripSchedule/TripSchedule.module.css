@@ -1,0 +1,13 @@
+.invoice-block {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: auto;
+  border: 1px solid #ddd;
+}
+.invoice-block h2 {
+  font-weight: bold;
+  color: #2c3e50;
+}

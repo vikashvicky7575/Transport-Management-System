@@ -1,0 +1,119 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Top Navbar Styling */
+.topNavbar {
+  background: linear-gradient(to right, #8003ba, #33014a);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f2c94c !important;
+  font-family: "Georgia", serif;
+}
+
+/* Sidebar container */
+.sidebar {
+  position: fixed;
+  top: 56px;
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 56px);
+  background: linear-gradient(to right, #8003ba, #33014a);
+  padding: 20px 15px;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+/* Common nav link style */
+.navLink {
+  color: #ffffff !important;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.navLink:hover {
+  background-color: #f2c94c;
+  color: #001f3f !important;
+}
+
+/* Active link */
+.activeLink {
+  background-color: #f2c94c;
+  color: #001f3f !important;
+  font-weight: bold;
+}
+
+/* Dropdown container */
+.dropdownContainer {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+/* Dropdown toggle */
+.dropdownToggle {
+  font-size: 1.1rem;
+}
+
+/* Dropdown menu */
+.dropdownMenu {
+  display: none;
+  list-style: none;
+  padding-left: 15px;
+  margin: 0;
+  border-radius: 8px;
+  background:#fff;
+  padding: 10px;
+}
+
+/* Show when parent has .open class */
+.open .dropdownMenu {
+  display: block;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Dropdown items */
+.dropdown-item {
+  display: block;
+  padding: 10px 14px;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 6px;
+  transition: background-color 0.3s ease;
+  background-color: transparent;
+}
+
+.dropdown-item:hover {
+  background-color: #f2c94c;
+  color: #001f3f;
+}
+
+/* Optional dropdown animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
