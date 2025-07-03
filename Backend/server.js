@@ -41,7 +41,7 @@ app.use("/api/vehicles", vehicleRoutes);
 //Driver routes post for Driver details
 app.use("/api/drivers", driverRoutes);
 //auth Routes for login & signup
-app.use("/api/auth", authRoutes);
+app.use("/auth", authRoutes);
 //trip Routes
 app.use("/api/tripSchedule", tripRoutes);
 //mainteances Routes
