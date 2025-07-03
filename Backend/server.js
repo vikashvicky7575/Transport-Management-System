@@ -37,15 +37,15 @@ app.get("/", (req, res) => {
 
 // Routes
 //vehicle routes post and get for vehicle details
-app.use("/api/vehicles", vehicleRoutes);
+app.use("/vehicles", vehicleRoutes);
 //Driver routes post for Driver details
-app.use("/api/drivers", driverRoutes);
+app.use("/drivers", driverRoutes);
 //auth Routes for login & signup
 app.use("/auth", authRoutes);
 //trip Routes
-app.use("/api/tripSchedule", tripRoutes);
+app.use("/tripSchedule", tripRoutes);
 //mainteances Routes
-app.use("/api/mainteances", maintenanceRoutes);
+app.use("/mainteances", maintenanceRoutes);
 
 // Start Server
 const PORT = 5000;
