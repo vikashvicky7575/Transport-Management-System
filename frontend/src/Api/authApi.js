@@ -2,7 +2,7 @@ const BASE_URL = `${process.env.REACT_APP_API_BASE_URL}/auth`
 
 //RegisterAPI
 export const registerAPI = async (payload) => {
-    const res = await fetch(`${BASE_URL}/api/register`, {
+    const res = await fetch(`${BASE_URL}/register`, {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
