@@ -19,7 +19,7 @@ const MaintenanceForm = () => {
     axios
       .get("http://localhost:5000/api/vehicles/available")
       .then((res) => {
-        console.log("Available vehicles fetched:", res.data); // ✅ log the data
+        console.log("Available vehicles fetched:", res.data); // log the data
         setVehicles(res.data);
       })
       .catch((err) => {

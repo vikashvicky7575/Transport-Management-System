@@ -3,7 +3,9 @@ import { addDriverRequest, addDriverSuccess, addDriverFailure, fetchDriverReques
 import axios from 'axios'
 
 
-const BASE_URL = 'http://localhost:5000/api';
+const BASE_URL = process.env.REACT_APP_API_BASE_URL;
+
+console.log("BASE_URL:", BASE_URL); // should print correct URL
 
 //worker saga : DriverDetails Post
 function* postDriverdetailsWorker(action) {

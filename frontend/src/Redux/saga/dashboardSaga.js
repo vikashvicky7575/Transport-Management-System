@@ -10,10 +10,10 @@ import {
 function* fetchDashboardDataWorker() {
   try {
     const [availableVehiclesRes, availableDriversRes, onTripRes, maintenanceRes] = yield all([
-      call(axios.get, "http://localhost:5000/api/vehicles/available"),
-      call(axios.get, "http://localhost:5000/api/drivers/driverDetails"),
-      call(axios.get, "http://localhost:5000/api/tripSchedule/ontripVehicles"),
-      call(axios.get, "http://localhost:5000/api/mainteances/getAllmainteances"), 
+      call(axios.get, `${process.env.REACT_APP_API_BASE_URL}/vehicles/available`),
+      call(axios.get, `${process.env.REACT_APP_API_BASE_URL}/drivers/driverDetails`),
+       call(axios.get,`${process.env.REACT_APP_API_BASE_URL}/tripSchedule/ontripVehicles`),
+      call(axios.get, `${process.env.REACT_APP_API_BASE_URL}/mainteances/getAllmainteances`), 
     ]);
 
     yield put(

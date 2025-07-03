@@ -5,7 +5,7 @@ import {
     createTripStart, createTripSuccess, createTripFail,fetchtripHistoryStart,fetchtripHistorySuccess,fetchtripHistoryFailure ,fetchVehiclesOnTripStart, fetchVehiclesOnTripSuccess, fetchVehiclesOnTripFailure, updateTripStatusStart, updateTripStatusSuccess, updateTripStatusFailure
 } from '../Slice/tripSlice'
 
-const BASE_URL = 'http://localhost:5000/api/tripSchedule'
+const BASE_URL = `${process.env.REACT_APP_API_BASE_URL}/tripSchedule`
 
 //workerSaga:createTrip
 function* createTripWorker(action) {

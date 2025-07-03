@@ -10,7 +10,7 @@ import axios from "axios";
 
 //Api Call
 function fetchUsers(role) {
-  return axios.get(`http://localhost:5000/api/auth/userlist/${role}`);
+  return axios.get(`${process.env.REACT_APP_API_BASE_URL}/auth/userlist/${role}`);
 }
 
 //Worker saga: fetchUserBy RoleAccess

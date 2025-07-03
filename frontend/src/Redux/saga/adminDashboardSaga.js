@@ -8,10 +8,10 @@ import {fetchAdminDashboardRequest,fetchAdminDashboardSuccess,fetchAdminDashboar
 function* fetchAdminDashBoardWorker(){
   try{
        const [totalVehicleRes,totalDriverRes,activeTripsres,BookingHistoryRes] = yield all([
-         call(axios.get,"http://localhost:5000/api/vehicles"),
-         call(axios.get,"http://localhost:5000/api/drivers/driverDetails"),
-         call(axios.get,"http://localhost:5000/api/tripSchedule/ontripVehicles"),
-         call(axios.get,"http://localhost:5000/api/tripSchedule/getAllTripdetails")
+         call(axios.get,`${process.env.REACT_APP_API_BASE_URL}/vehicles`),
+         call(axios.get,`${process.env.REACT_APP_API_BASE_URL}/drivers/driverDetails`),
+         call(axios.get,`${process.env.REACT_APP_API_BASE_URL}/tripSchedule/ontripVehicles`),
+         call(axios.get,`${process.env.REACT_APP_API_BASE_URL}/tripSchedule/getAllTripdetails`)
        ]);
 
        yield put(

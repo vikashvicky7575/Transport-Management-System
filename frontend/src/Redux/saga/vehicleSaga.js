@@ -11,35 +11,9 @@ import {
   updateVehicleRequest
 } from '../Slice/vehicleSlice';
 
-const BASE_URL = 'http://localhost:5000/api/vehicles'
+const BASE_URL = `${process.env.REACT_APP_API_BASE_URL}/vehicles`
 
 // Worker Saga: addVehicleWorker
-
-// function* addVehicleWorker(action) {
-//   try {
-//     console.log("Payload received in saga:", action.payload); // Debug
-
-//     // Make API call to backend with FormData
-//     const response = yield call(() =>
-//       axios.post(
-//         `${BASE_URL}/add-vehicle`,
-//         action.payload,
-//         {
-//           headers: {
-//             'Content-Type': 'multipart/form-data',
-//           },
-//         }
-//       )
-//     );
-
-//     console.log('Vehicle API success:', response.data); // Debug
-//     yield put(addVehicleSuccess(response.data));
-//   } catch (error) {
-//     console.error('Vehicle API error:', error.response?.data || error.message); // Debug
-//     yield put(addVehicleFailure(error.response?.data?.error || error.message));
-//   }
-// }
-
 function* addVehicleWorker(action) {
   try {
     const response = yield call(() =>
