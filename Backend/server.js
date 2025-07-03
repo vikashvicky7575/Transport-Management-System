@@ -24,11 +24,16 @@ app.use("/uploads", express.static("uploads"));
 
 mongoose
   .connect(process.env.MONGODB_URI, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+ 
   })
   .then(() => console.log("✅ Connected to MongoDB Atlas"))
   .catch((err) => console.error("❌ MongoDB connection error:", err));
+
+
+app.get("/", (req, res) => {
+  res.send("✅ Transport Management System API is Live!");
+});
+
 
 // Routes
 //vehicle routes post and get for vehicle details
