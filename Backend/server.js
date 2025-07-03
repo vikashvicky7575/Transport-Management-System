@@ -22,11 +22,13 @@ app.use(express.json());
 app.use("/uploads", express.static("uploads"));
 
 
-// Connect to MongoDB
 mongoose
-  .connect("mongodb://127.0.0.1:27017/cement_transport")
-  .then(() => console.log("MongoDB connected"))
-  .catch((err) => console.error("Mongo error:", err));
+  .connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => console.log("✅ Connected to MongoDB Atlas"))
+  .catch((err) => console.error("❌ MongoDB connection error:", err));
 
 // Routes
 //vehicle routes post and get for vehicle details
