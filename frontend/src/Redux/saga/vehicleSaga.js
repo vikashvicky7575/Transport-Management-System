@@ -11,7 +11,7 @@ import {
   updateVehicleRequest
 } from '../Slice/vehicleSlice';
 
-const BASE_URL = `${process.env.REACT_APP_API_BASE_URL}/vehicles`
+const BASE_URL = `${process.env.REACT_APP_API_BASE_URL}`
 
 // Worker Saga: addVehicleWorker
 function* addVehicleWorker(action) {
